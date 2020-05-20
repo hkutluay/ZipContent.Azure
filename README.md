@@ -5,7 +5,7 @@ Lists zip file content on Azure Blob service without downloading whole document.
 
 # Usage
 
-First install S3ZipContent via NuGet console:
+First install ZipContent.Azure via NuGet console:
 ```
 PM> Install-Package ZipContent.Azure
 ```
