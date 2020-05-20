@@ -9,7 +9,7 @@
       Lists zip file content on Azure Blob without downloading whole document. Supports both zip and zip64 files.
     </Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/hkutluay/ZipContent</RepositoryUrl>
+    <RepositoryUrl>https://github.com/hkutluay/ZipContent.Azure</RepositoryUrl>
     <PackageTags>zip list content azure</PackageTags>
   </PropertyGroup>
   <ItemGroup>
