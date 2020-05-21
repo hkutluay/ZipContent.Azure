@@ -1,4 +1,5 @@
 # ZipContent.Azure
+![build & test](https://github.com/hkutluay/ZipContent.Azure/workflows/build%20&%20test/badge.svg)
 
 Lists zip file content on Azure Blob service without downloading whole document. Supports both zip and zip64 files.
 
