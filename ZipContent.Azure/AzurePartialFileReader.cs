@@ -1,6 +1,7 @@
 ﻿using Azure;
 using Azure.Storage.Blobs;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using ZipContent.Core;
 
@@ -15,16 +16,16 @@ namespace ZipContent.Azure
             _blobClient = blobClient;
         }
 
-        public async Task<long> ContentLength()
+        public async Task<long> ContentLength(CancellationToken cancellationToken = default)
         {
-            var props = await _blobClient.GetPropertiesAsync();
+            var props = await _blobClient.GetPropertiesAsync(null, cancellationToken);
             return props.Value.ContentLength;
         }
 
-        public async Task<byte[]> GetBytes(ByteRange range)
+        public async Task<byte[]> GetBytes(ByteRange range, CancellationToken cancellationToken = default)
         {
 
-            var data = await _blobClient.DownloadAsync(new HttpRange(range.Start, range.End - range.Start));
+            var data = await _blobClient.DownloadAsync(new HttpRange(range.Start, range.End - range.Start), null, false, cancellationToken);
             return StreamToArray(data.Value.Content);
 
         }
