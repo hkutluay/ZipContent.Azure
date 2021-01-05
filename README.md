@@ -27,9 +27,9 @@ BlobClient blobClient = containerClient.GetBlobClient(fileName);
 
 IPartialFileReader partialReader = new AzurePartialFileReader(blobClient);
 
-IZipContentLister lister = new ZipContentLister();
+IZipContentLister lister = new ZipContentLister(partialReader);
 
-var contentList = await lister.GetContents(partialReader);
+var contentList = await lister.GetContents();
 
 foreach (var content in contentList)
    Console.WriteLine(item.FullName);
