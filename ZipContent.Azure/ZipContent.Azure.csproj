@@ -16,7 +16,7 @@ Lists zip file content on Azure Blob without downloading whole document. Support
     <FileVersion>1.2.0.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.4.2" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.13.0" />
     <PackageReference Include="ZipContent.Core" Version="1.2.0" />
   </ItemGroup>
   <ItemGroup>
